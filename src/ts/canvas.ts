@@ -28,8 +28,15 @@ function onOut() {
   console.log("mouseout");
 }
 
+function onReset(canvas: HTMLCanvasElement) {
+  const context = canvas.getContext("2d");
+  context?.clearRect(0, 0, canvas.offsetHeight, canvas.offsetWidth);
+}
+
 const initCanvas = () => {
   const canvas = <HTMLCanvasElement>document.getElementById("canvas1")!;
+  const resetButton = <HTMLButtonElement>document.getElementById("resetCanvas");
+  resetButton.addEventListener("click", () => onReset(canvas), false);
   // canvas.addEventListener('mousedown', onDown, false);
   // canvas.addEventListener('mouseup', onUp, false);
   canvas.addEventListener("click", (e) => onClick(e, canvas), false);
