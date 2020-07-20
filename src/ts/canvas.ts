@@ -16,7 +16,7 @@ function onClick(e: MouseEvent, canvas: HTMLCanvasElement) {
   // console.log(canvas.offsetWidth);
   // console.log(canvas.offsetHeight);
 
-  const context = canvas.getContext('2d')!;
+  const context = canvas.getContext("2d")!;
   context.fillRect(x, y, 10, 10);
 }
 
@@ -32,7 +32,7 @@ const initCanvas = () => {
   const canvas = <HTMLCanvasElement>document.getElementById("canvas1")!;
   // canvas.addEventListener('mousedown', onDown, false);
   // canvas.addEventListener('mouseup', onUp, false);
-  canvas.addEventListener('click', (e) => onClick(e, canvas), false);
+  canvas.addEventListener("click", (e) => onClick(e, canvas), false);
   // canvas.addEventListener('mouseover', onOver, false);
   // canvas.addEventListener('mouseout', onOut, false);
 };
