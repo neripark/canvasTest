@@ -1,17 +1,19 @@
 class testClass {
+    public _name: string;
 
-    constructor(name){
+    constructor(name: string){
         this.name = name;
+        this._name = name;
     }
 
     printName(){
-        console.log(this.name);
+        console.log(`名前は${this.name}`);
     }
     
     set name(name){
         this._name = name;
     }
-    get name(){
+    get name(): string {
         return this._name;
     }
 }
@@ -19,7 +21,10 @@ class testClass {
 const test = new testClass('tiny cat');
 test.printName();
 
-const heading = document.getElementById('heading');
+const heading = document.getElementById('heading')!;
 heading.addEventListener('click', () => {
     console.log(test.name);
 }, false);
+
+test.name = "aaaa";
+test.printName();

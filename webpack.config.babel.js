@@ -4,7 +4,7 @@ import htmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
     entry: {
-        "main": path.resolve(__dirname, './src/entry.js')
+        "main": path.resolve(__dirname, './src/entry.ts')
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -19,8 +19,8 @@ export default {
     module: {
         rules: [
             {
-                test: /\.js$/,
-                use: "babel-loader"
+                test: /\.ts$/,
+                use: "ts-loader"
             }
         ]
     },
