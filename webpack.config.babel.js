@@ -29,5 +29,8 @@ export default {
             template: path.resolve(__dirname, './src/index.html')
         }),
         new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    resolve: {
+        extensions: [".js", ".ts"]
+    },
 }

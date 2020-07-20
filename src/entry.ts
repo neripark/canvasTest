@@ -1,30 +1,3 @@
-class testClass {
-    public _name: string;
+import { testMethod } from "./ts/test";
 
-    constructor(name: string){
-        this.name = name;
-        this._name = name;
-    }
-
-    printName(){
-        console.log(`名前は${this.name}`);
-    }
-    
-    set name(name){
-        this._name = name;
-    }
-    get name(): string {
-        return this._name;
-    }
-}
-
-const test = new testClass('tiny cat');
-test.printName();
-
-const heading = document.getElementById('heading')!;
-heading.addEventListener('click', () => {
-    console.log(test.name);
-}, false);
-
-test.name = "aaaa";
-test.printName();
+testMethod();
